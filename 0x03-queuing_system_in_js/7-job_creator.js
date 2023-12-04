@@ -51,7 +51,7 @@ const jobs = [
 jobs.map((jobData)=> {
   const job = queue.create('push_notification_code_2', jobData).save((err) => {
     if (!err) {
-      console.log(`Notification job created: ${job.id}`)
+      console.log(`Notification job created: ${job.id}`);
     } else {
       console.log(`Notification job ${job.id} failed: ${err}`);
     }
@@ -59,7 +59,7 @@ jobs.map((jobData)=> {
 
   job.on('complete', () => {
       console.log(`Notification job ${job.id} completed`);
-      console.log("Here is the job info:", job.id, job.type, job.data);
+      // console.log("Here is the job info:", job.id, job.type, job.data);
     });
 
   job.on('progress', (progress) => {
