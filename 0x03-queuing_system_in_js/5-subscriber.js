@@ -12,5 +12,3 @@ subscriber.on('message', (channel, message) => {
   }
 });
 subscriber.subscribe('holberton school channel');
-
-
